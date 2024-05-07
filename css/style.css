@@ -16946,7 +16946,6 @@ img:hover,
   border-radius: 2px;
   overflow: hidden;
   background-color: #fff;
-  margin-bottom: 16px
 }
 
 @media (max-width: 786px) {
@@ -17031,6 +17030,12 @@ img:hover,
 
 .quantity-desktop {
   display: block;
+  height: 56px;
+}
+
+.quantity-desktop h3 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 .quantity-mobile {
