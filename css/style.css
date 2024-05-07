@@ -17055,7 +17055,7 @@ img:hover,
   } */
 
   .slide .slide__img .video-slide{
-    width: auto;
+    width: 100%;
     overflow: hidden;
     margin-top: 70px;
   }
