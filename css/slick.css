@@ -118,7 +118,7 @@
 
   .slider,
   .slide {
-    height: 93vh;
+    height: 100vh;
   }
 }
 
@@ -203,7 +203,7 @@
   position: absolute;
   bottom: 25px;
   list-style: none;
-  display: block;
+  display: none;
   text-align: center;
   padding: 0;
   margin: 0;
