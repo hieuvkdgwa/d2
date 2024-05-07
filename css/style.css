@@ -17046,12 +17046,18 @@ img:hover,
     justify-content: center;
   }
 
-  .slider {
+  /* .slider {
     height: 70vh;
   }
 
   .slide .slide__img img {
     height: 70vh;
+  } */
+
+  .slide .slide__img .video-slide{
+    width: 100%;
+    overflow: hidden;
+    margin-top: 70px;
   }
 }
 
