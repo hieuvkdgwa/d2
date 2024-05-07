@@ -17061,6 +17061,10 @@ img:hover,
   }
 }
 
+.slide .slide__img .video-slide{
+  width: 100%;
+}
+
 .chat-btn {
   position: absolute;
   right: 14px;
