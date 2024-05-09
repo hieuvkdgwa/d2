@@ -396,3 +396,11 @@
   animation: zoomInImageLogo 2s forwards;
   animation-delay: 10s;
 }
+
+@media (max-width: 786px) { 
+  .dgwa-logo {
+    width: 30%;
+    height: 20%;
+    bottom: 170%;
+  }
+}
