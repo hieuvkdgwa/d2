@@ -166,6 +166,10 @@
 
 .slide .slide__content--headings {
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .slide .slide__content--headings h1 {
@@ -402,5 +406,6 @@
     width: 30%;
     height: 20%;
     bottom: 170%;
+    padding: 0 10px;
   }
 }
