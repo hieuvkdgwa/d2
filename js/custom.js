@@ -161,13 +161,21 @@
 		  });
   }).scroll();
 
+//   var ImagePauses = [3000, 2000];
   $('.slider').slick({
     autoplay: true,
-    speed: 800,
+    speed: 3000,
+	// autoplaySpeed: ImagePauses[0],
     lazyLoad: 'progressive',
     arrows: true,
     dots: true,
+	// cssEase: 'linear',
   }).slickAnimation();
+//   $('.slider').on('afterChange', function(event, slick, currentSlide) {
+// 	console.log('Current slide: ' + currentSlide + '. Setting speed to: ' + ImagePauses[currentSlide]);
+//     // Update autoplay speed according to slide index
+//     $('.slider').slick('slickSetOption', 'autoplaySpeed', ImagePauses[currentSlide], true);
+//   });
 
   const panels = document.querySelectorAll(".panel");
 

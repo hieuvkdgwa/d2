@@ -154,7 +154,7 @@
 
 .slide .slide__content {
   position: absolute;
-  top: 80%;
+  top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -343,16 +343,29 @@
   }
 }
 
+@keyframes zoomInImageLogo {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
 .text-animation {
   overflow: hidden;
   white-space: nowrap;
-  animation: mymove 1s steps(10, end) forwards;
+  animation: mymove 0.5s steps(10, end) forwards;
 }
 
 .text-animation-2 {
   overflow: hidden;
   white-space: nowrap;
-  animation: mymove 1s steps(10, end) forwards;
+  animation: mymove 0.5s steps(10, end) forwards;
   animation-delay: 4s;
   width: 0;
 }
@@ -360,7 +373,7 @@
 .text-animation-3 {
   overflow: hidden;
   white-space: nowrap;
-  animation: mymove 1s steps(10, end) forwards;
+  animation: mymove 0.5s steps(10, end) forwards;
   animation-delay: 8s;
   left: 20%;
   width: 0;
@@ -373,7 +386,13 @@
 
 .dgwa-logo {
   position: absolute;
-  top: 45%;
+  bottom: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  visibility: hidden;
+}
+
+.img-logo-animation {
+  animation: zoomInImageLogo 2s forwards;
+  animation-delay: 10s;
 }
