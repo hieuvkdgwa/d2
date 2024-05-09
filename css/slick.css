@@ -408,4 +408,8 @@
     bottom: 170%;
     padding: 0 10px;
   }
+
+  .slick-dots {
+    bottom: 5px;
+  }
 }
