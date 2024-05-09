@@ -384,8 +384,7 @@
 }
 
 .zoomInImage {
-  -webkit-animation-name: zoomInImage;
-  animation-name: zoomInImage;
+  animation: zoomInImage 8s ease-in-out;
 }
 
 .dgwa-logo {
