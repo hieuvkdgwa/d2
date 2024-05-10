@@ -88,11 +88,11 @@
 				items: 1,
 				axis: "horizontal",
 				swipeAngle: false,
-				speed: 700,
+				speed: 100000,
 				edgePadding: 50,
 				nav: false,
 				gutter: 30,
-				autoplay: true,
+				// autoplay: true,
 				lazyload: true,
 				autoplayButtonOutput: false,
 				responsive: {
@@ -187,6 +187,28 @@
     }, timing);
   }
   changeSlide(0);
+
+//   // On slide change, pause all videos
+  slider.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+	console.log($('.slick-slide.slick-current').find('video').length)
+	// if ($('.slick-slide.slick-current').find('video').length == 0) {
+	// 	console.log('pause')
+	// }
+	$('video').each(function() {
+		$(this).get(0).pause();
+	});
+  });
+  
+  // On slide chnage, play a video inside the current slide
+  slider.on('afterChange', function(event, slick, currentSlide, nextSlide){
+	// $(currentSlide.children('video').get(0)).play();
+	// if( $('.slick-slide.slick-current').find('video').length !== 0) {
+	// 	console.log('play')
+	// 	// slicker.slick('slickPause');
+	//   $(".slider .slick-current video")[0].play();
+	// }
+  });
+
 
   //SERVICES
   const panels = document.querySelectorAll(".panel");
