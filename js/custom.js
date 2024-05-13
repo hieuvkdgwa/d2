@@ -188,24 +188,38 @@
   }
   changeSlide(0);
 
+  slider.on('init', function(event, slick, currentSlide, nextSlide){
+	// console.log($('.slick-slide.slick-current').find('video').length)
+	if ($('.slick-slide.slick-current').find('video').length > 0) {
+		console.log('init')
+		
+	}
+	
+  });
+
 //   // On slide change, pause all videos
   slider.on('beforeChange', function(event, slick, currentSlide, nextSlide){
-	console.log($('.slick-slide.slick-current').find('video').length)
-	// if ($('.slick-slide.slick-current').find('video').length == 0) {
-	// 	console.log('pause')
-	// }
-	$('video').each(function() {
-		$(this).get(0).pause();
+	// console.log($('.slick-slide.slick-current').find('video').length)
+	if ($('.slick-slide.slick-current').find('video').length == 0) {
+		$('video').each(function() {
+			$(this).get(0).pause();
+		});
+	}
+
+	setTimeout(function(){
+		if ($(slick.$slides[nextSlide]).find('video').length > 0) {
+			$(".slick-slide video")[0].play();
+		}
+	}, 500);
+
+	$('video').on('ended', function() {
+	$(".slider .slick-current video")[0].pause();
 	});
   });
   
   // On slide chnage, play a video inside the current slide
   slider.on('afterChange', function(event, slick, currentSlide, nextSlide){
-	// console.log($('.slick-slide.slick-current').getAttribute('data-slick-index'));
-	// $(currentSlide.children('video').get(0)).play();
 	if( $('.slick-slide.slick-active').find('video').length > 0) {
-		console.log('play')
-		// slicker.slick('slickPause');
 	  $(".slider .slick-current video")[0].play();
 	}
   });
