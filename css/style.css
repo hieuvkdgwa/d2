@@ -17088,6 +17088,8 @@ img:hover,
     width: 100%;
     overflow: hidden;
     margin-top: 70px;
+    height: 24vh;
+    object-fit: cover;
   }
 }
 

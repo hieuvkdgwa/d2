@@ -212,9 +212,6 @@
 		}
 	}, 500);
 
-	$('video').on('ended', function() {
-	$(".slider .slick-current video")[0].pause();
-	});
   });
   
   // On slide chnage, play a video inside the current slide

@@ -411,4 +411,9 @@
   .slick-dots {
     bottom: 5px;
   }
+
+  .slide .slide__img img {
+    height: 32vh;
+    object-fit: cover;
+  }
 }
